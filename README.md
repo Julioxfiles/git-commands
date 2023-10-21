@@ -122,7 +122,7 @@ Thank you so much to Estefania and freeCodeCamp for your special efforts and sha
 
 It is a version control system that allows us to track the changes we have made to a set of files.
 
-A set of files is a group of folders and files. In this case it is folder that contains files that make up a software project.
+A set of files is a group of folders and files. In this case it is a folder that contains files that make up a software project.
 
 ## What is github ?
 It is a hosting service that allows us to store software development and version control projects. 
