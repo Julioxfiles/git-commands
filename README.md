@@ -13,6 +13,8 @@ $ git clone https://github.com/Julioxfiles/forked-project.git
 $ git checkout -b new-feature 
 # Creates a branch called new-feature and change to it.
 
+Here is when you start to modify the project in Visual Studio Code.
+
 $ git add . # Add all files to the stage area.
 $ git commit -m 'I have added a new feature.'
 
@@ -26,6 +28,7 @@ Note: When working with others, you shoud never push the main local branch to th
 ## Working alone.
 
 The following comands are put in an order to make a local repository and link it to a the remote one. You could work alone with these commands.
+
 ```
 $ mkdir projectName # Create a new directory.
 
