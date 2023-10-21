@@ -114,7 +114,7 @@ $ git branch -d branchName # Delete a branch.
 
 # The github course.
 
-The content of this summary course of git made by your servant was taken from the freeCodeCamp GitHub tutorial video in spanish. I was never able to fully understand git until I was able to watch this video present it by Estefania Cassingena Navone. Here it is: https:#www.youtube.com/watch?v=mBYSUUnMt9M
+The content of this summary course of git made by your servant was taken from the freeCodeCamp GitHub tutorial video in spanish. I was never able to fully understand git until I was able to watch this video presented by Estefania Cassingena Navone. Here it is: https:#www.youtube.com/watch?v=mBYSUUnMt9M
 
 Thank you so much to Estefania and freeCodeCamp for your special efforts and sharing, and for all your contributions to us, the developers arround the world. https:#www.freecodecamp.org
 
