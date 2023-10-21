@@ -417,14 +417,93 @@ The local branch main is pushed to the remote origin repository.
 $ git push -u origin main // Upload or push the main branch to the remote origin repository (origin). 
 ```
 
-### Fork (Bifurcar un repositorio)
+## Fork (Bifurcar un repositorio)
 
-Making a fork is the action of creating a copy of another user's repository in your own Githug account.
+Ahead several definitions of what a fork is in github.
 
-Forking is copying an existing repository owned by another GitHub user into your GitHub account.
-Which means creating a new url for that repository but in your account. This makes a complete copy of the entire repository in your account.
+Making a fork is the action of creating a copy of another user's repository in your own github user account.
+
+A fork is an exact copy, made in your github account, of a github repository that is usually not yours. That is, in github you can go to a repository and click on the Fork button of repository of another user and when you click on it, github will ask you for your own github credentials to be able to make a copy of such a repository in your own account.
+
+Forking is copying an existing repository owned by another github user into your github account. Which means creating a new url for that repository but in your account. This makes a complete copy of the entire repository in your account.
 
 A fork is done by going to a user's account and clicking on the "fork" button of the repository that you want to fork toward your user account.
+
+### Steps to make a fork and clone it.
+
+1.- Go to the repository of the git account where you want to contribute. If it is a public repository, you just have to go there and click on it and log in with your account and user and a copy (fork) will be created in your user account.
+
+On the other hand, if the repository of the account to which you want to contribute is private, then the owner of that repository must add you as a contributing user or colaborator. And then you can have access to such repository and do the fork.
+
+
+![Alt text](images/image-6.png)
+
+Wait a few seconds. You may be redirect to your own github repository.
+
+
+![Alt text](images/image-2.png)
+
+Some info to keep in mind.
+
+
+![Alt text](images/image-3.png)
+
+
+![git](images/image-4.png)
+
+2.- Clone the repository from your github account, remember that you are going to clone the fork that is in your account and not the one from the original repository. Because, you can only push a repository that resides in your account and not in someone else's account.
+
+### Doing a clone step by step.
+  
+1.- Create a directory on your computer
+```
+$ mkdir project-name
+```
+
+2.- Clone the fork that you did and that it is in your own git account.
+```
+$ git clone https://github.com/julioxfiles/project-name.git 
+```
+
+3.- Install the project dependencies on your computer.
+    
+#### If the project is a Javascript proyect or if you are working with laravel/mix then do:
+
+```
+$ npm i
+$ npm audit fix
+$ npm audit fix -force
+$ npm run bundle
+$ npm run build //
+$ npm run live-server // runs the development server.
+```
+Note: Do npm run build-demo if it exists and enter the demo directory.
+
+#### If the project is in PHP or Laravel.
+
+3.1 - Install all the dependencies.
+```
+$ composer install
+```
+
+3.2 - Make a copy of the env_example file and rename 
+it as .env. Change the values of the DB_DATABASE, DB_USERNAME, DB_PASSWORD of the .env file to the local xampp enviroment. Or if a development server is used, ask for this information.
+
+3.3 - Create the database in phpMyAdmin.
+    
+3.4 - Generate key for the APP_KEY attribute in the .env file
+
+```
+$ php artisan key:generate // Generate the key 
+to use in APP_KEY attribute of the .env file
+```
+
+3.5 - Migrate
+```
+$ php artisan migrate // To perform the migrations.
+```
+
+Note: If in your project you use social networks to log in then you have to copy the credentials or tokens of those social networks also here at the end of the .env file
 
 ### Pull Requests (Solicitudes de combinacion).
 
@@ -436,7 +515,7 @@ It is a request that you make through github by clicking on a Pull Requests butt
 
 Normally when working with a group of developers what is done is the following:
 
-1.- A fork of the project in which you will make some contribution is made. This is done from the github page. Once the fork of such a project (repository) is made, a copy of that project will be hosted in your GitHub user account.
+1.- A fork of the project in which you will make some contribution is made. This is done from the github page. Once the fork of such a project (repository) is made, a copy of that project will be hosted in your github user account.
 
 2.- A folder is created on your computer. It is not necessary to initialize the folder. Nor add the origin.
 ```
@@ -468,13 +547,13 @@ You must keep in mind that the pull request must be made from the new-feature br
 
 Note: The creation of the branch in point number 4, is very necessary because if any problem occurs you will only need to delete the branch and the project that you have in your github account will remain unchanged. Otherwise, if you didn't create the branch, then you would have to create a new fork of the entire project again.
 
-![Alt text](image-5.png)
+![Alt text](images/image-5.png)
 
 ## How to update your forked copy when changes (new commits) have already been made to the original project.
 
 Once you have forked a repository. In your github account you will be informed if new changes or updates have been made to the original project. If this happens you must click to Synchronize the original project with your forked copy. That is, so that the new changes made in the original project are passed to your forked copy.
 
-![Alt text](image-6.png)
+![Alt text](images/image-6.png)
 
 Una vez que hayas actualizado tu bifurcacion utilizando este boton deberas tambien actualizar tu repositorio local.
 Recuerda que para actualizar tu repositorio local necesitas realizar el siguiente comando:
