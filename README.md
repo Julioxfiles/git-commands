@@ -19,7 +19,8 @@ $ git add . # Add all files to the stage area.
 $ git commit -m 'I have added a new feature.'
 
 $ git push origin new-feature 
-# Push all files from the new-feature local branch to the remote (origin) repository. If the branch does not exists in the remote repository, it will be created.
+# Push all files from the new-feature local branch to the remote (origin) repository. 
+If the branch does not exists in the remote repository, it will be created.
 
 ```
 
