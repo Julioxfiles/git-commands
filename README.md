@@ -18,6 +18,7 @@ $ git commit -m 'I have added a new feature.'
 
 $ git push origin new-feature 
 # Push all files from the new-feature local branch to the remote (origin) repository. If the branch does not exists in the remote repository, it will be created.
+
 ```
 
 Note: When working with others, you shoud never push the main local branch to the remote repository. When the pull request succeeds, then you may want to delete your new-feature local branch.
