@@ -1,3 +1,6 @@
+This content is a summary by Julio Acosta of a the freeCodeCamp GitHub tutorial video.
+Here: https://www.youtube.com/watch?v=mBYSUUnMt9M
+
 # The most used git commands.
 
 ## What is git ?
