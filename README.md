@@ -124,7 +124,7 @@ $ git add filename // Add a file
 $ git add . // Add all files.
 ```
 
-Saca del area de preparacion a un archivo.
+Get out of the staging area to a file. 
 ```
 $ git rm --cache filename 
 ```
