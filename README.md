@@ -1,16 +1,110 @@
 # The most used git commands.
+The git commands here are organized into blocks of possible working order. And they could be repeated between blocks.
+
+## Workinig with others.
+The following commands are put in an order for the fork and clone procedures when working on a project with other develpers.
 
 ```
-$ git status # Shows the stage of the files.
-$ git branch # Shows the list of branches. 
-$ git branch my-new-branch # Create a new branch.
-$ git branch -b my-new-branch # Create a branch and change to it.
-$ git add filename # Add a file to the stage area.
-$ git add . # Add all files to the stage area.
-$ git commit -m 'This is a commit message'
+$ mkdir projectName # Create a new directory.
 
+$ git clone https://github.com/Julioxfiles/forked-project.git
+# Clone a remote repository into the current local repository.
+
+$ git checkout -b new-feature 
+# Creates a branch called new-feature and change to it.
+
+$ git add . # Add all files to the stage area.
+$ git commit -m 'I have added a new feature.'
+
+$ git push origin new-feature 
+# Push all files from the new-feature local branch to the remote (origin) repository. If the branch does not exists in the remote repository, it will be created.
+```
+
+Note: When working with others, you shoud never push the main local branch to the remote repository. When the pull request succeeds, then you may want to delete your new-feature local branch.
+
+## Working alone.
+
+The following comands are put in an order to make a local repository and link it to a the remote one. You could work alone with these commands.
+```
+$ mkdir projectName # Create a new directory.
+
+$ git init 
+# Initialize the current directory as a local repository.
+
+$ git branch -M main # Rename master as main branch.
+
+$ git remote add origin https:#github.com/Julioxfiles/proyectName.git 
+# Set a url of a remote repository as value for the origin word also called remote-name. 
+
+$ git branch # Shows the list of branches. 
+
+$ git checkout -b new-feature 
+# Creates a branch called new-feature and change to it.
+
+Note: Here you start to work on your files in Visual Studio Code.
+
+$ git add . # Add all modified the files to the stage area.
+
+$ git commit -m 'I did something'
+
+$ git checkout main // Change to the main branch.
+$ git merge new-feature 
+# Merge the new-feature local branch into the main local branch.
+
+$ git push origin main 
+# push all files from the main branch to the main branch in the remote repository.
+
+$ git push -f origin main # force the push.
+```
+
+## Basic commands
+
+Now some basic commands used in all scenarios.
+
+```
+$ mkdir project-name # Create a directory.
+
+$ git config --global user.name "your-username"
+$ git config --global user.email "your-email"
+$ git config user.name 
+$ git config user email 
+$ git config --global core.editor "code --wait"
+$ git config --global core.editor "atom --wait
+
+$ git init 
+# Initialize the current directory as a local repository.
+
+$ git branch -M main # Rename master as main branch.
+
+$ git remote add origin https:#github.com/Julioxfiles/proyectName.git 
+# Set a url of a remote repository as value for the origin word also called remote-name. 
 
 $ git remote set-url origin https:#github.com/Julioxfiles/git-course.git 
+# Change the url value of the origin word.
+
+$ git status # Show the stage of the files.
+$ git log # Show the commit history.
+$ git log -p # Shows the commits pausing. Q exit.
+$ git log --online # Show the commit history online.
+$ git add fileName # Add a file to the stage area.
+$ git add . # Add all files to the stage area.
+
+$ git commit -m 'I did something'
+
+$ git checkout main // Change to the main branch.
+$ git merge new-feature 
+# Merge the new-feature local branch into the main local branch.
+
+$ git push origin main 
+# push all files from the main branch to the main branch in the remote repository.
+
+$ git push -f origin main # force the push.
+$ git branch # List all branches.
+$ git checkout branchName # Creates a branch.
+$ git checkout -b branchName # Creates and change to a branch.
+$ git branch -d branchName # Delete a branch.
+
+
 ```
 
 # The github course.
@@ -68,17 +162,17 @@ $ git config --global core.editor "atom --wait"
 
 ### Initializing the current directory.
 
-In order for you to make a proyect-folder in your computer to become a local git repository, you must apply the following command, this will create a hidden directory called .git into it, which will contained all the versions of your code. And then your proyect-folder will be considered as a local repository. So you must never enter into the .git folder or change or delete it. You must always work in your proyect-folder not into your .git folder which is into it.
+In order for you to make a project-folder in your computer to become a local git repository, you must apply the following command, this will create a hidden directory called .git into it, which will contained all the versions of your code. And then your project-folder will be considered as a local repository. So you must never enter into the .git folder or change or delete it. You must always work in your project-folder not into your .git folder which is into it.
 
 ```
-$ make proyect-folder
+$ make project-folder
 $ git init
-Output: Initialized empty Git repository in C:/xampp/htdocs/proyect-folder/.git/
+Output: Initialized empty Git repository in C:/xampp/htdocs/project-folder/.git/
 ```
 
 You must always work here:
 ```
-C:/xampp/htdocs/proyect-folder/
+C:/xampp/htdocs/project-folder/
 ```
 Of course, the path here is just an example of any possible path to your computer using your operating system's command-line interface or git's command-line bash interface.
 
@@ -100,7 +194,7 @@ There are three different stages of a file when working with git:
 
 ### Modification Area (or Working Area).
 
-When a file has been created or modified with Visual Studio Code or any other editor and it is into your proyect folder but you have not yet applied the following command to pass it to the staging area.
+When a file has been created or modified with Visual Studio Code or any other editor and it is into your project folder but you have not yet applied the following command to pass it to the staging area.
 
 To pass your file or files to the staging area.
 ```
@@ -119,7 +213,7 @@ $ commit -m 'write a comment" # Will send all the tracked files to the local rep
 
 ### Repository Area (Confirmed Area)
 
-Technically speaking, the repository area is a folder called .git which has been created into your proyect folder when you applied the "git init" command to it. This .git folder is hidden and contains all the versions, branches and commits of your proyect.
+Technically speaking, the repository area is a folder called .git which has been created into your project folder when you applied the "git init" command to it. This .git folder is hidden and contains all the versions, branches and commits of your project.
 
 ### Basic commands
 
@@ -490,7 +584,7 @@ $ git clone https:#github.com/julioxfiles/project-name.git
 
 3.- Install the project dependencies on your computer.
     
-#### If the project is a Javascript proyect or if you are working with laravel/mix then do:
+#### If the project is a Javascript project or if you are working with laravel/mix then do:
 
 ```
 $ npm i
@@ -584,7 +678,7 @@ Recuerda que para actualizar tu repositorio local necesitas realizar el siguient
 ```
 $ git checkout main
 $ git status # Para ver si no tienes ningun commit que hacer. De hecho aqui se espera que no tengas commits que hacer. Porque se supone que siempre debes trabajar en una rama.
-$ git pull origin main # Estro jalara los datos de la rama main de tu respositorio remoto.
+$ git pull origin main # Estro jalara los datos de la rama main de tu respositorio remote.
 ```
 
 ## Summary
@@ -611,7 +705,7 @@ $ git pull origin main # Here the main branch of the remote repository is always
 
 Now that the branch where you are going to make the contribution is created. You can also delete other existing branches that you no longer need and that have already been approved by the owner of the original repository when using your pull requests.
 ```
-$ git branch -d branch # This will delete the branch that is no longer needed because the owner of the original proyect did approve and merge to its own original main branch.
+$ git branch -d branch # This will delete the branch that is no longer needed because the owner of the original project did approve and merge to its own original main branch.
 ```
 
 ## Issues
