@@ -1,10 +1,10 @@
 # The most used git commands.
 
-The content of this git summary made by Julio Acosta was taken from the freeCodeCamp GitHub tutorial video in spanish. I was never able to fully understand git until I was able to watch this video.
+The content of this git summary made by Julio Acosta was taken from the freeCodeCamp GitHub tutorial video in spanish. I was never able to fully understand git until I was able to watch this video present it by Estefania Cassingena Navone.
 
 Here it is: https://www.youtube.com/watch?v=mBYSUUnMt9M
 
-Thank you so much to freeCodeCamp for your special efforts and sharing, and for all your contributions to us, the developers arround the world.
+Thank you so much to Estefania and freeCodeCamp for your special efforts and sharing, and for all your contributions to us, the developers arround the world.
 
 https://www.freecodecamp.org
 
