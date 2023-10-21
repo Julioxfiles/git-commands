@@ -1,12 +1,23 @@
 # The most used git commands.
 
-The content of this git summary made by Julio Acosta was taken from the freeCodeCamp GitHub tutorial video in spanish. I was never able to fully understand git until I was able to watch this video present it by Estefania Cassingena Navone.
+```
+$ git status # Shows the stage of the files.
+$ git branch # Shows the list of branches. 
+$ git branch my-new-branch # Create a new branch.
+$ git branch -b my-new-branch # Create a branch and change to it.
+$ git add filename # Add a file to the stage area.
+$ git add . # Add all files to the stage area.
+$ git commit -m 'This is a commit message'
 
-Here it is: https://www.youtube.com/watch?v=mBYSUUnMt9M
 
-Thank you so much to Estefania and freeCodeCamp for your special efforts and sharing, and for all your contributions to us, the developers arround the world.
+$ git remote set-url origin https:#github.com/Julioxfiles/git-course.git 
+```
 
-https://www.freecodecamp.org
+# The github course.
+
+The content of this summary course of git made by your servant was taken from the freeCodeCamp GitHub tutorial video in spanish. I was never able to fully understand git until I was able to watch this video present it by Estefania Cassingena Navone. Here it is: https:#www.youtube.com/watch?v=mBYSUUnMt9M
+
+Thank you so much to Estefania and freeCodeCamp for your special efforts and sharing, and for all your contributions to us, the developers arround the world. https:#www.freecodecamp.org
 
 ## What is git ?
 
@@ -19,9 +30,9 @@ It is a hosting service that allows us to store software development and version
 
 ## Creating and setting up your account.
 
-Once you have downloaded the git application on your computer from https://git-scm.com/downloads, you can now start using the following commands.
+Once you have downloaded the git application on your computer from https:#git-scm.com/downloads, you can now start using the following commands.
 
-You have to create an account at https://github.com/ and then use the following commands to allow your computer to 
+You have to create an account at https:#github.com/ and then use the following commands to allow your computer to 
 communicate with github.com through the username of your email account. This will allow you to send (push) and receive (pull) files from your local repository (a git project folder) on your local computer to your remote repository on the github repository server.
 
 ### Setting up the config.
@@ -71,12 +82,12 @@ C:/xampp/htdocs/proyect-folder/
 ```
 Of course, the path here is just an example of any possible path to your computer using your operating system's command-line interface or git's command-line bash interface.
 
-### Set your Master branch as Main.
+### Setting your Master branch as Main.
 
 In previous versions of git, the master branch was called "master" and the rest of the branches were "slave" branches that you could name whatever you wanted. But for ethical and racism-free reasons, git no longer uses those terms. Instead, the master branch should be renamed to main.
 
 ```
-$ git branch -M main // Set the name of the master branch as main. The -M is a parameter to change the name.
+$ git branch -M main # Set the name of the master branch as main. The -M is a parameter to change the name.
 ```
 
 ## Available Areas: Modification, Staging and Respository.
@@ -93,8 +104,8 @@ When a file has been created or modified with Visual Studio Code or any other ed
 
 To pass your file or files to the staging area.
 ```
-$ git add filename // Send a file to the staging area.
-$ git add . // Send all files to the staging area.
+$ git add filename # Send a file to the staging area.
+$ git add . # Send all files to the staging area.
 ```
 
 ### Staging Area (Preparation)
@@ -103,7 +114,7 @@ In this area you will find all the files that are currently being tacked by git,
 
 Sending your files from the staging area to the repository area.
 ```
-$ commit -m 'write a comment" // Will send all the tracked files to the local repository.
+$ commit -m 'write a comment" # Will send all the tracked files to the local repository.
 ```
 
 ### Repository Area (Confirmed Area)
@@ -115,13 +126,13 @@ Technically speaking, the repository area is a folder called .git which has been
 It allows you to see the status of the files in your local repository and some usefull info about the status of the commits in your remote repository.
 
 ```
-git status // Will show the status of the files. 
+git status # Will show the status of the files. 
 ```
 
 Add a file to the staging (preparation) area.
 ```
-$ git add filename // Add a file
-$ git add . // Add all files.
+$ git add filename # Add a file
+$ git add . # Add all files.
 ```
 
 Get out of the staging area to a file. 
@@ -161,7 +172,7 @@ When a commit is executed, the terminal output returns an identifier.
 
 You can see the logs of the commints using the log command. 
 ```
-git log // You will see the logs of the commits.
+git log # You will see the logs of the commits.
 ```
 
 ### Changing the comment of an alredy done commit. 
@@ -180,7 +191,7 @@ if you notice that you did not do something in the change that you wanted to do 
 
 ```
 $ git reset --soft HEAD~1 
-$ git log // You won't see the last done commit.
+$ git log # You won't see the last done commit.
 ```
 --soft . It means that only the commit record will be deleted, but the changes or modifications you made to the files in that last commit will preserve the changes you made.
 
@@ -223,24 +234,24 @@ create the branch.
 Once we have a copy of the repository, we can create a standalone copy that develops independently of other branches.
 
 ```
-$ git branch version-javascript // Created a branch called version-javascript
+$ git branch version-javascript # Created a branch called version-javascript
 
 ```
 
 ```
-$ git branch // List all the branches in the local repository.
-$ git branch -a // List all the branches in the remote repository.
+$ git branch # List all the branches in the local repository.
+$ git branch -a # List all the branches in the remote repository.
 ```
 
 ```
-$ git checkout version-javascript // Permite cambiar a la rama version-javascript.
+$ git checkout version-javascript # Permite cambiar a la rama version-javascript.
 ```
 
 The following command does both steps. Just remember that when running this command. As well as the other two above, a branch or copy of your project will be created from the branch in which it is currently located. That is, if it is in main, then a copy will be created with all the contents of the main branch. But if you are in a sub branch, then from that
 branch the copy will be made.
 
 ```
-$ git checkout -b version-python // Created the version-python branch it change to it.
+$ git checkout -b version-python # Created the version-python branch it change to it.
 ```
 
 Para volver a la rama main
@@ -253,16 +264,16 @@ $ git checkout main
 By changing your location to tha branch.
 
 ```
-$ git branch // List all branches.
-$ git checkout version-javascript // Changing to it.
-$ git branch -m version-js // Changing the name.
+$ git branch # List all branches.
+$ git checkout version-javascript # Changing to it.
+$ git branch -m version-js # Changing the name.
 ```
 
 ## Changing the name of a branch fro the main branch.
 ```
-$ git checkout main // Going to the main branch.
-$ git branch // List all branches.
-$ git branch -m version-python version-py // Providing a current name and a new name.
+$ git checkout main # Going to the main branch.
+$ git branch # List all branches.
+$ git branch -m version-python version-py # Providing a current name and a new name.
 ```
 The previous command to change the name using the param -m, receives two parameters or
 arguments. The first one is the current name of the branch that you intend to rename and the second one is the new name.
@@ -272,21 +283,21 @@ arguments. The first one is the current name of the branch that you intend to re
 Applies to local branches and not to github branches. And you should not be inside the branch you want to delete. Preferably use the main branch to delete from there.
 
 ```
-$ git branch -d version-jv // delete the branch version-jv
+$ git branch -d version-jv # delete the branch version-jv
 Output: Deleted branch version-jv (was b699681).
 ```
 
 You can also delete a branch located in the remote repository (origin) from the command line.
 ```
-$ git push origin -d your-branch-name // This will delete the branch in the remote repository.
+$ git push origin -d your-branch-name # This will delete the branch in the remote repository.
 ```
 
 ## Git log for branches.
 
 ```
 $ git checkout version-jv
-$ git log // List the done commits.
-$ git log -p // To see the commit history doing pauses. You can exit from the git log -p mode using the Q letter.
+$ git log # List the done commits.
+$ git log -p # To see the commit history doing pauses. You can exit from the git log -p mode using the Q letter.
 ```
 
 Commits are inherited to new branches created. But new branches can create their own commits and these will not be part of the commits of the main branch.
@@ -294,7 +305,7 @@ Commits are inherited to new branches created. But new branches can create their
 ## Git log in just one line.
 
 ```
-$ git log --oneline // Will show a list of commits with thier information in one line.
+$ git log --oneline # Will show a list of commits with thier information in one line.
 
 Output: 
 6617de2 (HEAD -> version-js) I did this change.
@@ -315,18 +326,18 @@ Option 1.- Doing a merge towards the main branch. You must go to the main branch
 ```
 $ git branch
 $ git checkout main
-$ git merge texto-expandido // Merge the texto-expandido branch into main branch.
+$ git merge texto-expandido # Merge the texto-expandido branch into main branch.
 ```
 
 Option 2.- Making a merge using two arguments. The branch that will receive the modifications and the branch that contains the modifications.
 ```
-$ git branch // List the branches
-$ git checkout main // Change to the main branch.
+$ git branch # List the branches
+$ git checkout main # Change to the main branch.
 
-$ git merge main expanded-text // The main bracnh will recieve and the expanded-text has the new content.
+$ git merge main expanded-text # The main bracnh will recieve and the expanded-text has the new content.
 
-$ git log // List all commits.
-$ git log --oneline // List commits in one line.
+$ git log # List all commits.
+$ git log --oneline # List commits in one line.
 ```
 The above command worked in git version 2.39.2.windows.1. But may not work in other versions.
 
@@ -335,8 +346,8 @@ The above command worked in git version 2.39.2.windows.1. But may not work in ot
 Conflicts arise when the same line of a file, the same element or text is modified. What git considers as incompatible.
 
 ```
-$ git checkout main // Go first to the main branch.
-$ git merge version-js // Merge the changes done in local version-js branch with the local main branch.
+$ git checkout main # Go first to the main branch.
+$ git merge version-js # Merge the changes done in local version-js branch with the local main branch.
 ```
 
 ## Cloning a repository
@@ -347,32 +358,36 @@ important: When we clone a repository, we don't need to initialize the folder wi
 We do not also need to assign the url to the origin using the git remote add origin remote-url command, this is done automatically when using the git clone command.
 
 ```
-$ git clone https://github.com/Julioxfiles/php-replace.git
+$ git clone https:#github.com/Julioxfiles/php-replace.git
 ```
 
-If you alredy have add a remote value to your origin placeholder like this:
+If you alredy have add a remote value to your remote-name (origin) like this:
 ```
-$ git remote add origin https://github.com/Julioxfiles/php-replace.git 
+$ git remote add origin https:#github.com/Julioxfiles/php-replace.git 
 ```
-
 then you can do:
 ```
-$ git clone origin // This will clone the remote repository.
+$ git clone origin # This will clone the remote repository.
 ```
 
-origin - is a variable or placeholder in our local repository that recieves the value of the remote path repository. So the next time we have to use that path we just neet to use origin in its place.
+origin - is a variable or remote-name in our local repository that recieves the value of the remote path repository. So the next time we have to use that path we just neet to use origin in its place.
 
 This will show the path of the remote repository if we have done the git remote add origin command.
 ```
 $ git remote
-$ git remote -v // Will show the paths for push and fetch remote repositories. The origin value.
+$ git remote -v # Will show the paths for push and fetch remote repositories. The origin value.
 ```
+How to change the url address of the remote-name (origin).
+```
+git remote set-url origin  https:#github.com/Julioxfiles/git-course.git 
+```
+Applying this command will change the current value of the origin url.
 
 ### push
 Push or move changes from our local repository to our remote repository on github.com
 
 ```
-$ git push origin main // Send the local main repository to our remote repository (origin).
+$ git push origin main # Send the local main repository to our remote repository (origin).
 ```
 
 ### pull
@@ -380,7 +395,7 @@ $ git push origin main // Send the local main repository to our remote repositor
 Used to download the content of a remote repository and immediately update a local repository so that both have the same information.This command merges the changes. That is, it automatically does a git merge.
 
 ```
-$ git pull origin main // It brings us the origin remote repository and its main branch. The update to the local repository is immediate.
+$ git pull origin main # It brings us the origin remote repository and its main branch. The update to the local repository is immediate.
 ```
 
 ### fetch (or Search)
@@ -389,13 +404,13 @@ It is used to verify changes made on the remote repository without merging those
 
 This command checks if there is a new branch in the remote repository that is not in the local repository and then fetches it from the remote repository by creating a copy in the local repository.
 ```
-$ git fetch origin // This checks if a new branch exists in the remote repository and creates that branch in the local repository.
+$ git fetch origin # This checks if a new branch exists in the remote repository and creates that branch in the local repository.
 ```
 
 You can also create a new branch in the local repository and then pull the remote branch into that new local branch.
 ```
 $ git checkout -b new-branch-name
-$ git pull origin new-branch-name // Get the remote branch data from github.
+$ git pull origin new-branch-name # Get the remote branch data from github.
 ```
 
 Git feth lets you know if changes have been made to the remote repository since you last updated your local repository with git pull.
@@ -404,7 +419,7 @@ Git feth lets you know if changes have been made to the remote repository since 
 
 ```
 $ git checkout origin/main
-// You will see the remote main branch in your local computer.
+# You will see the remote main branch in your local computer.
 ```
 
 To go back to the main local branch use:
@@ -417,12 +432,12 @@ $ git checkout main
 This command will set the url path of your remote repository in github with your local repository.
 
 ```
-$ git remote add origin https://github.com/Julioxfiles/php-replace.git
+$ git remote add origin https:#github.com/Julioxfiles/php-replace.git
 ```
 
 The local branch main is pushed to the remote origin repository.
 ```
-$ git push -u origin main // Upload or push the main branch to the remote origin repository (origin). 
+$ git push -u origin main # Upload or push the main branch to the remote origin repository (origin). 
 ```
 
 ## Fork (Bifurcar un repositorio)
@@ -470,7 +485,7 @@ $ mkdir project-name
 
 2.- Clone the fork that you did and that it is in your own git account.
 ```
-$ git clone https://github.com/julioxfiles/project-name.git 
+$ git clone https:#github.com/julioxfiles/project-name.git 
 ```
 
 3.- Install the project dependencies on your computer.
@@ -482,8 +497,8 @@ $ npm i
 $ npm audit fix
 $ npm audit fix -force
 $ npm run bundle
-$ npm run build //
-$ npm run live-server // runs the development server.
+$ npm run build #
+$ npm run live-server # runs the development server.
 ```
 Note: Do npm run build-demo if it exists and enter the demo directory.
 
@@ -502,13 +517,13 @@ it as .env. Change the values of the DB_DATABASE, DB_USERNAME, DB_PASSWORD of th
 3.4 - Generate key for the APP_KEY attribute in the .env file
 
 ```
-$ php artisan key:generate // Generate the key 
+$ php artisan key:generate # Generate the key 
 to use in APP_KEY attribute of the .env file
 ```
 
 3.5 - Migrate
 ```
-$ php artisan migrate // To perform the migrations.
+$ php artisan migrate # To perform the migrations.
 ```
 
 Note: If in your project you use social networks to log in then you have to copy the credentials or tokens of those social networks also here at the end of the .env file
@@ -527,17 +542,17 @@ Normally when working with a group of developers what is done is the following:
 
 2.- A folder is created on your computer. It is not necessary to initialize the folder. Nor add the origin.
 ```
-$ mkdir project-name // This make a directory called project-name.
+$ mkdir project-name # This make a directory called project-name.
 ```
 
 3.- A clone of the fork that you made has to be done. The fork that was left in your github user account.
 ```
-$git clone https://github.com/julioxfiles/fork-project-name.git 
+$git clone https:#github.com/julioxfiles/fork-project-name.git 
 ```
 
 4.- Once the cloning is done in the previous step, a new branch is created with a descriptive name of what you are going to do.
 ```
-$ git ckeckout -b 'new-feature' // This will create a new branch called 'new-feature' and will change to it.
+$ git ckeckout -b 'new-feature' # This will create a new branch called 'new-feature' and will change to it.
 ```
 
 5.- The pertinent changes are made to the files with Visual Studio Code and saved.
@@ -547,7 +562,7 @@ $ git ckeckout -b 'new-feature' // This will create a new branch called 'new-fea
 $ git status
 $ git add.
 $ git commit -m "I have added a new feature"
-$ git push origin new-feature // The new-feature branch is uploaded. This will create for you a new branch with that new-feature name on github.
+$ git push origin new-feature # The new-feature branch is uploaded. This will create for you a new branch with that new-feature name on github.
 ```
 
 7.- The request or pull request is made to the owner of the original repository from github.
@@ -568,8 +583,8 @@ Recuerda que para actualizar tu repositorio local necesitas realizar el siguient
 
 ```
 $ git checkout main
-$ git status // Para ver si no tienes ningun commit que hacer. De hecho aqui se espera que no tengas commits que hacer. Porque se supone que siempre debes trabajar en una rama.
-$ git pull origin main // Estro jalara los datos de la rama main de tu respositorio remoto.
+$ git status # Para ver si no tienes ningun commit que hacer. De hecho aqui se espera que no tengas commits que hacer. Porque se supone que siempre debes trabajar en una rama.
+$ git pull origin main # Estro jalara los datos de la rama main de tu respositorio remoto.
 ```
 
 ## Summary
@@ -581,8 +596,8 @@ If you already did the previous step of forking some time before. Then you must 
 If it is the first time that you are going to work on a fork, then you make a clone of your fork to your machine. And you must create a branch to add the new functionality with which you are going to contribute.
 
 ```
-$ git clone https://github.com/my-user/my-fork.git
-$ git checkout -b my-new-feature // You start working and then finish.
+$ git clone https:#github.com/my-user/my-fork.git
+$ git checkout -b my-new-feature # You start working and then finish.
 $ git status
 $ git add .
 $ git push origin my-new-feature
@@ -591,12 +606,12 @@ $ git push origin my-new-feature
 If this is not the first time you are going to work with your fork, then you do not need to clone the fork again in your local repository. Only pull changes from the "main branch" that you already synchronized in github with your local main branch.
 
 ```
-$ git pull origin main // Here the main branch of the remote repository is always pulled and never a branch of the remote repository.
+$ git pull origin main # Here the main branch of the remote repository is always pulled and never a branch of the remote repository.
 ```
 
 Now that the branch where you are going to make the contribution is created. You can also delete other existing branches that you no longer need and that have already been approved by the owner of the original repository when using your pull requests.
 ```
-$ git branch -d branch // This will delete the branch that is no longer needed because the owner of the original proyect did approve and merge to its own original main branch.
+$ git branch -d branch # This will delete the branch that is no longer needed because the owner of the original proyect did approve and merge to its own original main branch.
 ```
 
 ## Issues
