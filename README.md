@@ -1,6 +1,6 @@
 # The most used git commands.
 
-The content of this git summary made by Julio Acosta was taken from the freeCodeCamp GitHub tutorial video in spanish.
+The content of this git summary made by Julio Acosta was taken from the freeCodeCamp GitHub tutorial video in spanish. I was never able to fully understand git until I was able to watch this video.
 
 Here it is: https://www.youtube.com/watch?v=mBYSUUnMt9M
 
