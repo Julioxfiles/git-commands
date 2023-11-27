@@ -1,8 +1,18 @@
-# The most used git commands.
+#  The most used git commands.
 The git commands here are organized into blocks of possible working order. And they could be repeated between blocks.
 
 ## Workinig with others.
 The following commands are put in an order for the fork and clone procedures when working on a project with other develpers.
+
+Estos son los comandos nuevos:
+```
+$ mkdir foldername # Create a new folder.
+$ run start # Execute the start 
+```
+![Alt text](<Ian Preaching.png>)
+
+![Alt text](image.png)
+
 
 ```
 $ mkdir projectName # Create a new directory.
