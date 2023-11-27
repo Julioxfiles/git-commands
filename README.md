@@ -4,17 +4,6 @@ The git commands here are organized into blocks of possible working order. And t
 ## Workinig with others.
 The following commands are put in an order for the fork and clone procedures when working on a project with other develpers.
 
-Estos son los comandos nuevos:
-```
-$ mkdir foldername # Create a new folder.
-$ run start # Execute the start 
-```
-![Alt text](<Ian Preaching.png>)
-
-![Alt text](image.png)
-
-
-```
 $ mkdir projectName # Create a new directory.
 
 $ git clone https://github.com/Julioxfiles/forked-project.git
