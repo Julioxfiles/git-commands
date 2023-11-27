@@ -7,10 +7,8 @@ The following commands are put in an order for the fork and clone procedures whe
 $ mkdir projectName # Create a new directory.
 
 $ git clone https://github.com/Julioxfiles/forked-project.git
-# Clone a remote repository into the current local repository.
 
-$ git checkout -b new-feature 
-# Creates a branch called new-feature and change to it.
+# Clone a remote repository into the current local repository.
 
 Here is when you start to modify the project in Visual Studio Code.
 
