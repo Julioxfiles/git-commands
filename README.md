@@ -721,4 +721,22 @@ Issues can be opened, edited, deleted, closed as completed, or closed as unsolve
 
 Name and color labels can also be added to the numbers to classify the type of topic they cover.
 
+## Changing the remote origin repository.
+
+If you need to point your local repository to a new remote repository than you have to 
+be careful that the new repository will be empty. Yoy may not want to delete the data
+that exist in the new origin remote repository.
+
+```
+git remote -v # To see what is the current origin repository into your local repository.
+git remote set-url origin https://github.com/tonyhansen/traffic-analyzer.git
+git add .
+git commit -m 'My first update'
+git push main origin
+git push origin main -f
+
+# Use -f if the new github repository is empty.
+# -f will force to update all the files into the empty repository.
+```
+
 Done by: Julio Acosta.
